@@ -1,0 +1,119 @@
+/* UTILITY STYLES */
+
+/* Light mode nav colors */
+:root {
+  --nav-text: #000;
+  --nav-li-text: #000;
+  --nav-text-active: #ff6600;
+  --nav-bg: #fff;
+  --nav-side-bg: #fff;
+}
+
+/* Dark mode nav colors */
+[data-theme="dark"] {
+  --nav-text: #fff;
+  --nav-li-text: #b6b6b6;
+  --nav-text-active: #ff9900;
+  --nav-bg: #000;
+  --nav-side-bg: #1f1f1f;
+}
+
+.navbar-text {
+  color: var(--nav-text) !important;
+}
+
+.navbar-li-text {
+  color: var(--nav-li-text);
+}
+
+.navbar-bg {
+  background-color: var(--nav-bg) !important;
+}
+
+.navbar-side-bg {
+  background-color: var(--nav-side-bg) !important;
+}
+
+/* NAVBAR STYLES */
+nav {
+  box-shadow: -1px 4px 20px rgba(0, 0, 17, 0.299);
+}
+
+.navbrand {
+  width: 35px;
+  border-radius: 2px;
+}
+
+.nav-btn-toggle-modes {
+  border: 1px solid #a2a2a267;
+  border-radius: 16px;
+  padding: 0.1em 0.3em;
+  width: 32px;
+  height: 18px;
+  font-size: 10px !important;
+}
+
+.nav-link:hover {
+  color: #fc7521e3;
+  transition: color 0.3s ease-in;
+}
+
+.nav-link:focus {
+  color: #fc7521e3;
+}
+
+/* SIDENAV STYLES */
+.custom-sidenav {
+  width: 80% !important;
+  background-color: #fff;
+  box-shadow: -4px 0 25px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+.offcanvas.offcanvas-end {
+  transform: translateX(100%) !important;
+}
+
+.offcanvas.show {
+  transform: translateX(0) !important;
+}
+
+/* MEDIA STYLES */
+@media (min-width: 768px) {
+  .navbrand {
+    width: 75px;
+    border-radius: 2px;
+  }
+  .custom-sidenav {
+    width: 32% !important;
+  }
+
+  .nav-btn-toggle-modes {
+    border: 1px solid #a2a2a267;
+    border-radius: 16px;
+    padding: 0.1em 0.3em;
+    width: 40px;
+    height: 22px;
+    font-size: 14px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbrand {
+    width: 60px;
+    border-radius: 2px;
+  }
+  .offcanvas {
+    position: fixed !important;
+    visibility: hidden !important;
+  }
+
+  .nav-btn-toggle-modes {
+    border: 1px solid #a2a2a267;
+    border-radius: 16px;
+    padding: 0.1em 0.3em;
+    width: 36px;
+    height: 20px;
+    font-size: 12px !important;
+  }
+}
