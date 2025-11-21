@@ -54,27 +54,27 @@ const NavBar = () => {
             <div className="d-none d-lg-block me-auto mx-3">
               <ul className="navbar-nav me-auto gap-2">
                 <li className="nav-item">
-                  <Link to="/" className="nav-link navbar-li-text fs-sml">
+                  <Link to="/" className="nav-link navbar-li-text">
                     Home
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="#" className="nav-link navbar-li-text fs-sml">
+                  <Link to="#" className="nav-link navbar-li-text">
                     Services
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="#" className="nav-link navbar-li-text fs-sml">
+                  <Link to="#" className="nav-link navbar-li-text">
                     Products
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="#" className="nav-link navbar-li-text fs-sml">
+                  <Link to="#" className="nav-link navbar-li-text">
                     Blog
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="#" className="nav-link navbar-li-text fs-sml">
+                  <Link to="#" className="nav-link navbar-li-text">
                     Contacts
                   </Link>
                 </li>

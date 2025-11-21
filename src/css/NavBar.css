@@ -12,7 +12,7 @@
 /* Dark mode nav colors */
 [data-theme="dark"] {
   --nav-text: #fff;
-  --nav-li-text: #b6b6b6;
+  --nav-li-text: #b7b7b7;
   --nav-text-active: #ff9900;
   --nav-bg: #000;
   --nav-side-bg: #1f1f1f;
@@ -100,7 +100,7 @@ nav {
 
 @media (min-width: 992px) {
   .navbrand {
-    width: 60px;
+    width: 90px;
     border-radius: 2px;
   }
   .offcanvas {
@@ -115,5 +115,9 @@ nav {
     width: 36px;
     height: 20px;
     font-size: 12px !important;
+  }
+
+  .nav-items {
+    font-size: 15px;
   }
 }
