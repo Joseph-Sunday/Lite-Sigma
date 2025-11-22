@@ -6,7 +6,7 @@
 
 .hero-section-poster {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   object-fit: cover;
   object-position: 30% 200%;
   overflow: hidden;
@@ -164,6 +164,25 @@
   80% { clip-path: inset(30% 0 30% 0); transform: translate(1px, 0); }
   100% { clip-path: inset(0 0 0 0); transform: translate(2px, 0); }
 } */
+
+
+/* Main Styles */
+.main-section-wrapper {
+  margin-top: 5em;
+}
+
+.main-section-container h1 {
+  font-family: "Anton", sans-serif;
+  font-weight: 100;
+  font-size: 2.3em;
+  line-height: 1.5em;
+  letter-spacing: 3px;
+}
+
+.main-section-container p {
+  padding: 0 .5em;
+  margin-top: 1.1em;
+}
 
 /* Media Styles */
 @media (min-width: 425px) {
