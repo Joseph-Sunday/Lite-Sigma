@@ -7,7 +7,7 @@ import ScrollLeft from "./ScrollLeft";
 const MainSection = () => {
   return (
     <>
-      <main className="container-fluid main-section">
+      <main className="main-section">
         <div className="container-fluid px-lg-4 main-section-wrapper d-lg-flex justify-content-center align-items-center gap-5">
           <ScrollLeft>
             <div className="main-section-container">
@@ -110,6 +110,41 @@ const MainSection = () => {
             </div>
           </ScrollLeft>
         </div>
+
+        <section className="section-core-values">
+          <div className="section-core-values-first-child">
+            <h1 className="text-center">OUR CORE VALUES.</h1>
+            <p className="navbar-li-text text-center">
+              Driving innovation, empowering growths and delivering real
+              results.
+            </p>
+          </div>
+          <div className="section-core-values-cards mt-5 d-flex justify-content-center align-items-center flex-column gap-4">
+            <div className="card section-core-values-cards-card">
+              <h1 className="card-title">INNOVATION.</h1>
+              <p className="card-texts">
+                We power businesses with relentless innovation in technologies,
+                approaches, and processes to stay ahead of the curve.
+              </p>
+            </div>
+            <div className="card section-core-values-cards-card">
+              <h1 className="card-title">EXCELLENCE.</h1>
+              <p className="card-texts">
+                We never settle. We continually improve to ensure our clients
+                get the best possible service and the most effective solutions.
+              </p>
+            </div>
+            <div className="card section-core-values-cards-card">
+              <h1 className="card-title">IMPACT.</h1>
+              <p className="card-texts">
+                We create positive impact by helping businesses grow
+                sustainably. Through data-driven insights and smart strategies,
+                we ensure that every step we take delivers measurable value and
+                long-term success.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );

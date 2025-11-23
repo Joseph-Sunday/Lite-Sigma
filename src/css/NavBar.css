@@ -54,12 +54,12 @@ nav {
 }
 
 .nav-link:hover {
-  color: #fc7521e3;
+  color: #b54500;
   transition: color 0.3s ease-in;
 }
 
 .nav-link:focus {
-  color: #fc7521e3;
+  color: #b54500;
 }
 
 /* SIDENAV STYLES */
