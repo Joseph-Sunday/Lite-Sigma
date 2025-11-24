@@ -3,8 +3,14 @@ import "../css/Home.css";
 import "../css/Navbar.css";
 import ScrollRight from "./ScrollRight";
 import ScrollLeft from "./ScrollLeft";
+import ScrollUp from "./ScrollUp";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const MainSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "10px" });
+
   return (
     <>
       <main className="main-section">
@@ -113,35 +119,67 @@ const MainSection = () => {
 
         <section className="section-core-values">
           <div className="section-core-values-first-child">
-            <h1 className="text-center">OUR CORE VALUES.</h1>
-            <p className="navbar-li-text text-center">
+            <ScrollUp>
+              <h1 className="text-center">OUR CORE VALUES.</h1>
+            </ScrollUp>
+            <motion.p
+              className="navbar-li-text text-center"
+              ref={ref}
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ delay: 1, duration: 0.5 }}
+            >
               Driving innovation, empowering growths and delivering real
               results.
-            </p>
+            </motion.p>
           </div>
-          <div className="section-core-values-cards mt-5 d-flex justify-content-center align-items-center flex-column gap-4">
+          <div className="section-core-values-cards mt-5">
             <div className="card section-core-values-cards-card">
-              <h1 className="card-title">INNOVATION.</h1>
-              <p className="card-texts">
+              <ScrollUp>
+                <h1 className="card-title">INNOVATION.</h1>
+              </ScrollUp>
+              <motion.p
+                className="card-texts"
+                ref={ref}
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ delay: 0.8, duration: 0.5 }}
+              >
                 We power businesses with relentless innovation in technologies,
                 approaches, and processes to stay ahead of the curve.
-              </p>
+              </motion.p>
             </div>
             <div className="card section-core-values-cards-card">
-              <h1 className="card-title">EXCELLENCE.</h1>
-              <p className="card-texts">
+              <ScrollUp>
+                <h1 className="card-title">EXCELLENCE.</h1>
+              </ScrollUp>
+              <motion.p
+                className="card-texts"
+                ref={ref}
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ delay: 0.8, duration: 0.5 }}
+              >
                 We never settle. We continually improve to ensure our clients
                 get the best possible service and the most effective solutions.
-              </p>
+              </motion.p>
             </div>
             <div className="card section-core-values-cards-card">
-              <h1 className="card-title">IMPACT.</h1>
-              <p className="card-texts">
+              <ScrollUp>
+                <h1 className="card-title">IMPACT.</h1>
+              </ScrollUp>
+              <motion.p
+                className="card-texts"
+                ref={ref}
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ delay: 0.8, duration: 0.5 }}
+              >
                 We create positive impact by helping businesses grow
                 sustainably. Through data-driven insights and smart strategies,
                 we ensure that every step we take delivers measurable value and
                 long-term success.
-              </p>
+              </motion.p>
             </div>
           </div>
         </section>
