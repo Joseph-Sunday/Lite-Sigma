@@ -221,7 +221,7 @@ html[data-theme="dark"] .main-section-wrapper-poster {
   border-radius: 10px;
   border: none;
   padding: 2.3em 1.5em;
-  background-color: #f2f2f2a2;
+  background-color: #f1f1f1a3;
 }
 
 html[data-theme="dark"] .section-core-values-cards .card {
@@ -266,6 +266,65 @@ html[data-theme="dark"] .section-core-values-cards .card:hover {
 .section-core-values-cards-card:hover .card-texts {
   color: #454545;
   transition: color 0.5s ease;
+}
+
+/* Main Section Saas Styles */
+.main-section-saas {
+  padding: 6em 1em;
+}
+
+.main-section-saas-head h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 2.7em;
+  font-weight: 100;
+  letter-spacing: 3px;
+  line-height: 70px;
+}
+
+.main-section-saas-orange {
+  color: #da691d;
+  font-size: 1.15em;
+}
+
+.mt-7 {
+  margin-top: 4em;
+}
+
+.main-section-saas-card {
+  position: relative;
+  background-color: #f1f1f1a3;
+  padding: 2em 1em;
+  border-radius: 15px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  height: 450px;
+}
+
+html[data-theme="dark"] .main-section-saas-card {
+  background-color: #222222;
+  box-shadow: none;
+}
+
+.main-section-saas-card h1 {
+  color: #da691d;
+  font-family: "Anton", sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.main-section-saas-card p {
+  font-size: 15px;
+}
+
+.main-section-saas-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.main-section-saas-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: -2px 2px 20px #707070c4;
 }
 
 /* Media Styles */
@@ -342,8 +401,24 @@ html[data-theme="dark"] .section-core-values-cards .card:hover {
     font-weight: 800;
   }
 
+  /* Main Styles */
+
   .section-core-values {
     padding: 7em 2em;
+  }
+
+  /* Saas styles */
+  .main-section-saas {
+    padding: 6em 2em;
+  }
+
+  .main-section-saas-card {
+    height: 500px;
+  }
+
+  .main-section-saas-flex-container {
+    flex-direction: row !important;
+    gap: 3em !important;
   }
 }
 

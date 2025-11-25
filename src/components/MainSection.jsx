@@ -143,7 +143,7 @@ const MainSection = () => {
                 ref={ref}
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
-                transition={{ delay: 0.8, duration: 0.5 }}
+                transition={{ delay: 0.1, duration: 0.5 }}
               >
                 We power businesses with relentless innovation in technologies,
                 approaches, and processes to stay ahead of the curve.
@@ -158,7 +158,7 @@ const MainSection = () => {
                 ref={ref}
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
-                transition={{ delay: 0.8, duration: 0.5 }}
+                transition={{ delay: 0.1, duration: 0.5 }}
               >
                 We never settle. We continually improve to ensure our clients
                 get the best possible service and the most effective solutions.
@@ -173,13 +173,43 @@ const MainSection = () => {
                 ref={ref}
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
-                transition={{ delay: 0.8, duration: 0.5 }}
+                transition={{ delay: 0.1, duration: 0.5 }}
               >
                 We create positive impact by helping businesses grow
                 sustainably. Through data-driven insights and smart strategies,
                 we ensure that every step we take delivers measurable value and
                 long-term success.
               </motion.p>
+            </div>
+          </div>
+        </section>
+
+        <section className="main-section-saas">
+          <div className="main-section-saas-head">
+            <h1 className="text-center">
+              WE CREATE
+              <span className="main-section-saas-orange"> SAAS APPLICATION </span>
+               THAT SCALE.
+            </h1>
+            <p className="text-center navbar-li-text">Powerful. Flexible. Built for end-users alike</p>
+          </div>
+          <div className="d-flex justify-content-center align-items-center gap-4 flex-column mt-7 main-section-saas-flex-container">
+            <div className="main-section-saas-card">
+              <h1>B2B</h1>
+              <p className=" py-3 navbar-li-text">
+                From SMS, USSD, Web, to Mobile Apps. We build applications that
+                solve critical business problems and drive organizational
+                growth.
+              </p>
+              <img src="/B2B.png" alt="B2B" />
+            </div>
+            <div className="main-section-saas-card">
+              <h1>B2B2BC</h1>
+              <p className="py-3"> 
+                We combine channels intelligently to maximize business value
+                while delivering seamless experiences for end-users.
+              </p>
+              <img src="/B2B2BC.png" alt="B2B2BC" />
             </div>
           </div>
         </section>
