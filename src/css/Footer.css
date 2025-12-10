@@ -1,0 +1,58 @@
+:root {
+  --footer-bg: #f2f2f2;
+}
+
+[data-theme="dark"] {
+  --footer-bg: #1f1f1f;
+}
+
+/* Utility styles */
+.underline-none {
+  text-decoration: none;
+}
+
+/* General Styles */
+footer {
+  background-color: var(--footer-bg);
+  padding: 5em 2em;
+}
+
+.footer-section-container img {
+  width: 150px;
+  height: auto;
+}
+
+.footer-container h6 {
+  font-family: "calibri", sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 3em 0 1em;
+  /* letter-spacing: 1px; */
+}
+
+.footer-container,
+.footer-section-container p {
+  font-size: 15px;
+}
+
+.footer-container-text-hover p:hover {
+  color: #cc4f01;
+}
+
+.footer-section-container-5 button {
+  padding: 0.5em;
+  background: #d3641fe3;
+  border-radius: 5px;
+  width: 30px;
+  border: none;
+}
+
+/* Media styles */
+@media (min-width: 768px) {
+  footer {
+    padding: 3em 2em 1.5em;
+  }
+}
+
+@media (min-width: 1024px) {
+}

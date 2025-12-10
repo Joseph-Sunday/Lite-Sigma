@@ -294,9 +294,9 @@ html[data-theme="dark"] .section-core-values-cards .card:hover {
   position: relative;
   background-color: #f1f1f1a3;
   padding: 2em 1em;
-  border-radius: 15px;
+  border-radius: 20px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  height: 450px;
+  height: auto;
 }
 
 html[data-theme="dark"] .main-section-saas-card {
@@ -325,6 +325,45 @@ html[data-theme="dark"] .main-section-saas-card {
 .main-section-saas-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: -2px 2px 20px #707070c4;
+}
+
+/* Our Partners Styles */
+
+.main-section-our-partners {
+  padding: 8em 1em;
+}
+
+.main-section-our-partners-head {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main-section-our-partners-head h1 {
+  color: #da691d;
+  font-family: "ANTON", sans-serif;
+  font-weight: 100;
+  font-size: 3.5em;
+  letter-spacing: 4px;
+  line-height: 90px;
+  margin-bottom: 0.3em;
+}
+
+.logo {
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.1s ease;
+}
+
+.partner-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-section-our-partners-logo-container img:hover {
+  transform: scale(1.1);
 }
 
 /* Media Styles */
@@ -359,6 +398,40 @@ html[data-theme="dark"] .main-section-saas-card {
     font-size: 13px;
     font-weight: 800;
   }
+
+  /* Saas Styles */
+
+  .main-section-saas {
+    padding: 6em 1.5em;
+  }
+
+  .main-section-saas-orange {
+    font-size: 1.05em;
+  }
+
+  .main-section-saas-card {
+    padding: 2em;
+  }
+
+  .main-section-saas-head {
+    width: 85%;
+    margin: 0 auto;
+    text-align: justify !important;
+  }
+
+  /* Our Partners Styles */
+  .main-section-our-partners-logo-container {
+    /* flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 4em; */
+    margin-top: 3em;
+    padding: 0 1em;
+  }
+
+  /* .main-section-our-partners-logo-container img {
+    width: 110px;
+  } */
 }
 
 @media (min-width: 768px) {
@@ -409,11 +482,17 @@ html[data-theme="dark"] .main-section-saas-card {
 
   /* Saas styles */
   .main-section-saas {
-    padding: 6em 2em;
+    padding: 6em 1.5em;
+    width: 100%;
+  }
+
+  .main-section-saas-orange {
+    font-size: 1.05em;
   }
 
   .main-section-saas-card {
-    height: 500px;
+    height: auto;
+    padding: 2em;
   }
 
   .main-section-saas-flex-container {
@@ -621,4 +700,22 @@ html[data-theme="dark"] .main-section-saas-card {
   .section-core-values-cards-card {
     width: 100%;
   }
+
+  /* Saas Styles */
+  .main-section-saas {
+    padding: 6em 8em;
+  }
+
+  .main-section-saas-card {
+    height: 670px;
+  }
+
+  /* Our Partners Styles */
+  .main-section-our-partners-logo-container {
+    padding: 0 6em;
+  }
+
+  /* .main-section-our-partners-logo-container img {
+    width: 100px;
+  } */
 }

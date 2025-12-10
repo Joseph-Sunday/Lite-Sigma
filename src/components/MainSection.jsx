@@ -4,6 +4,7 @@ import "../css/Navbar.css";
 import ScrollRight from "./ScrollRight";
 import ScrollLeft from "./ScrollLeft";
 import ScrollUp from "./ScrollUp";
+import Transform from "./Transform";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -188,28 +189,79 @@ const MainSection = () => {
           <div className="main-section-saas-head">
             <h1 className="text-center">
               WE CREATE
-              <span className="main-section-saas-orange"> SAAS APPLICATION </span>
-               THAT SCALE.
+              <span className="main-section-saas-orange">
+                {" "}
+                SAAS APPLICATION
+              </span>{" "}
+              THAT SCALE.
             </h1>
-            <p className="text-center navbar-li-text">Powerful. Flexible. Built for end-users alike</p>
+            <p className="text-center navbar-li-text">
+              Powerful. Flexible. Built for businesses end-users alike
+            </p>
           </div>
           <div className="d-flex justify-content-center align-items-center gap-4 flex-column mt-7 main-section-saas-flex-container">
             <div className="main-section-saas-card">
-              <h1>B2B</h1>
-              <p className=" py-3 navbar-li-text">
+              <ScrollUp>
+                <h1>B2B</h1>
+              </ScrollUp>
+              <motion.p
+                className=" py-1 navbar-li-text"
+                ref={ref}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: -5 } : {}}
+                transition={{ delay: 0.5, duration: 0.8 }}
+              >
                 From SMS, USSD, Web, to Mobile Apps. We build applications that
                 solve critical business problems and drive organizational
                 growth.
-              </p>
+              </motion.p>
+
               <img src="/B2B.png" alt="B2B" />
             </div>
             <div className="main-section-saas-card">
-              <h1>B2B2BC</h1>
-              <p className="py-3"> 
+              <ScrollUp>
+                <h1>B2B2BC</h1>
+              </ScrollUp>
+              <motion.p
+                className="py-1 navbar-li-text"
+                ref={ref}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: -5 } : {}}
+                transition={{ delay: 0.5, duration: 0.8 }}
+              >
                 We combine channels intelligently to maximize business value
                 while delivering seamless experiences for end-users.
-              </p>
+              </motion.p>
               <img src="/B2B2BC.png" alt="B2B2BC" />
+            </div>
+          </div>
+        </section>
+
+        <section className="main-section-our-partners">
+          <div className="main-section-our-partners-head text-center">
+            <h1>OUR PARTNERS</h1>
+            <p className="text-center navbar-li-text">
+              TRUSTED BY LEADING BRANDS ACROSS INDUSTRIES
+            </p>
+          </div>
+          <div className="main-section-our-partners-logo-container row g-3">
+            <div className="partner-logo-wrapper col-12 col-md-3 col-xl-2">
+              <img src="/Mtn.png" className="logo" alt="MTN" />
+            </div>
+            <div className="partner-logo-wrapper col-12 col-md-3 col-xl-2">
+              <img src="/Airtel.png" className="logo mt-3" alt="Airtel" />
+            </div>
+            <div className="partner-logo-wrapper col-12 col-md-3 col-xl-2">
+              <img src="/9mobile.jpg" className="logo mt-3" alt="9Mobile" />
+            </div>
+            <div className="partner-logo-wrapper col-12 col-md-3 col-xl-2">
+              <img src="/FGMB.png" className="logo mt-3" alt="FGMB" />
+            </div>
+            <div className="partner-logo-wrapper col-12 col-md-3 col-xl-2">
+              <img src="/Easplay.webp" className="logo mt-3" alt="Easplay" />
+            </div>
+            <div className="partner-logo-wrapper col-12 col-md-3 col-xl-2">
+              <img src="/ASO.png" className="logo mt-3" alt="ASO Logo" />
             </div>
           </div>
         </section>

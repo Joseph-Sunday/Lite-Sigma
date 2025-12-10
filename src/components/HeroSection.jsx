@@ -20,7 +20,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <section className="hero-section ">
+      <section className="hero-section">
         <img
           src="/LiteSigmaHeroSection.png"
           alt="Lite Sigma Hero Section"
