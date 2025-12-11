@@ -4,7 +4,8 @@ import "../css/Navbar.css";
 import ScrollRight from "./ScrollRight";
 import ScrollLeft from "./ScrollLeft";
 import ScrollUp from "./ScrollUp";
-import Transform from "./Transform";
+import TextOpacity from "./TextOpacity";
+import TextScrollUp from "./TextScrollUp";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -123,64 +124,54 @@ const MainSection = () => {
             <ScrollUp>
               <h1 className="text-center">OUR CORE VALUES.</h1>
             </ScrollUp>
-            <motion.p
-              className="navbar-li-text text-center"
-              ref={ref}
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
-              transition={{ delay: 1, duration: 0.5 }}
-            >
-              Driving innovation, empowering growths and delivering real
-              results.
-            </motion.p>
+
+            <TextOpacity>
+              <p className="navbar-li-text text-center">
+                Driving innovation, empowering growths and delivering real
+                results.
+              </p>
+            </TextOpacity>
           </div>
           <div className="section-core-values-cards mt-5">
             <div className="card section-core-values-cards-card">
               <ScrollUp>
                 <h1 className="card-title">INNOVATION.</h1>
               </ScrollUp>
-              <motion.p
-                className="card-texts"
-                ref={ref}
-                initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 1 } : {}}
-                transition={{ delay: 0.1, duration: 0.5 }}
-              >
-                We power businesses with relentless innovation in technologies,
-                approaches, and processes to stay ahead of the curve.
-              </motion.p>
+
+              <TextOpacity>
+                <p className="card-texts navbar-li-text">
+                  We power businesses with relentless innovation in
+                  technologies, approaches, and processes to stay ahead of the
+                  curve.
+                </p>
+              </TextOpacity>
             </div>
             <div className="card section-core-values-cards-card">
               <ScrollUp>
                 <h1 className="card-title">EXCELLENCE.</h1>
               </ScrollUp>
-              <motion.p
-                className="card-texts"
-                ref={ref}
-                initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 1 } : {}}
-                transition={{ delay: 0.1, duration: 0.5 }}
-              >
-                We never settle. We continually improve to ensure our clients
-                get the best possible service and the most effective solutions.
-              </motion.p>
+
+              <TextOpacity>
+                <p className="card-texts">
+                  We never settle. We continually improve to ensure our clients
+                  get the best possible service and the most effective
+                  solutions.
+                </p>
+              </TextOpacity>
             </div>
             <div className="card section-core-values-cards-card">
               <ScrollUp>
                 <h1 className="card-title">IMPACT.</h1>
               </ScrollUp>
-              <motion.p
-                className="card-texts"
-                ref={ref}
-                initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 1 } : {}}
-                transition={{ delay: 0.1, duration: 0.5 }}
-              >
-                We create positive impact by helping businesses grow
-                sustainably. Through data-driven insights and smart strategies,
-                we ensure that every step we take delivers measurable value and
-                long-term success.
-              </motion.p>
+
+              <TextOpacity>
+                <p className="card-texts">
+                  We create positive impact by helping businesses grow
+                  sustainably. Through data-driven insights and smart
+                  strategies, we ensure that every step we take delivers
+                  measurable value and long-term success.
+                </p>
+              </TextOpacity>
             </div>
           </div>
         </section>
@@ -204,17 +195,14 @@ const MainSection = () => {
               <ScrollUp>
                 <h1>B2B</h1>
               </ScrollUp>
-              <motion.p
-                className=" py-1 navbar-li-text"
-                ref={ref}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: -5 } : {}}
-                transition={{ delay: 0.5, duration: 0.8 }}
-              >
-                From SMS, USSD, Web, to Mobile Apps. We build applications that
-                solve critical business problems and drive organizational
-                growth.
-              </motion.p>
+
+              <TextScrollUp>
+                <p className=" py-1 navbar-li-text">
+                  From SMS, USSD, Web, to Mobile Apps. We build applications
+                  that solve critical business problems and drive organizational
+                  growth.
+                </p>
+              </TextScrollUp>
 
               <img src="/B2B.png" alt="B2B" />
             </div>
@@ -222,16 +210,14 @@ const MainSection = () => {
               <ScrollUp>
                 <h1>B2B2BC</h1>
               </ScrollUp>
-              <motion.p
-                className="py-1 navbar-li-text"
-                ref={ref}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: -5 } : {}}
-                transition={{ delay: 0.5, duration: 0.8 }}
-              >
-                We combine channels intelligently to maximize business value
-                while delivering seamless experiences for end-users.
-              </motion.p>
+
+              <TextScrollUp>
+                <p className="py-1 navbar-li-text">
+                  We combine channels intelligently to maximize business value
+                  while delivering seamless experiences for end-users.
+                </p>
+              </TextScrollUp>
+
               <img src="/B2B2BC.png" alt="B2B2BC" />
             </div>
           </div>
