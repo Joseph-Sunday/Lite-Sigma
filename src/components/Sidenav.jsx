@@ -1,17 +1,50 @@
 import { useThemeContext } from "../context/ThemeContexts";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Offcanvas } from "bootstrap";
 import "../css/NavBar.css";
 import "../css/App.css";
 
 const Sidenav = () => {
   const { theme } = useThemeContext();
+  const navigate = useNavigate();
+
+  const handleNavigate = (path) => {
+    const el = document.getElementById("rightSideNav");
+    if (!el) return;
+
+    let instance = Offcanvas.getInstance(el);
+
+    if (!instance) {
+      instance = new Offcanvas(el);
+    }
+
+    // Wait for offcanvas to fully close before hiding instance
+    el.addEventListener(
+      "hidden.bs.offcanvas",
+      () => {
+        // Remove Backdrop
+        const backdrop = document.querySelector(".offcanvas-backdrop");
+        backdrop?.remove();
+
+        // Restore Scrolling(unlock page)
+        document.body.style.overflow = "";
+        document.body.classList.remove("modal-open");
+
+        navigate(path);
+      },
+      { once: true }
+    );
+
+    instance?.hide();
+  };
+
   return (
     <div>
       <div
         className={`offcanvas offcanvas-end custom-sidenav ${
           theme === "dark" ? "navbar-side-bg" : "navbar-side-bg"
         } `}
-        tabindex="-1"
+        tabIndex="-1"
         id="rightSideNav"
       >
         <div className="offcanvas-header d-flex justify-content-end align-item-center">
@@ -27,29 +60,49 @@ const Sidenav = () => {
         <div className="offcanvas-body">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <Link to="/" className="navbar-li-text nav-link fs-6">
+              <button
+                to="/"
+                className="navbar-li-text nav-link fs-6"
+                onClick={() => handleNavigate("/")}
+              >
                 Home
-              </Link>
+              </button>
             </li>
             <li className="nav-item">
-              <Link to="/" className="navbar-li-text nav-link fs-6 mt-1">
+              <button
+                to="/services"
+                className="navbar-li-text nav-link fs-6 mt-1"
+                onClick={() => handleNavigate("/services")}
+              >
                 Services
-              </Link>
+              </button>
             </li>
             <li className="nav-item">
-              <Link to="/" className="navbar-li-text nav-link fs-6 mt-1">
+              <button
+                to="/"
+                className="navbar-li-text nav-link fs-6 mt-1"
+                onClick={() => handleNavigate("/")}
+              >
                 Products
-              </Link>
+              </button>
             </li>
             <li className="nav-item">
-              <Link to="/" className="navbar-li-text nav-link fs-6 mt-1">
+              <button
+                to="/"
+                className="navbar-li-text nav-link fs-6 mt-1"
+                onClick={() => handleNavigate("/")}
+              >
                 Blog
-              </Link>
+              </button>
             </li>
             <li className="nav-item">
-              <Link to="/" className="navbar-li-text nav-link fs-6 mt-1">
+              <button
+                to="/"
+                className="navbar-li-text nav-link fs-6 mt-1"
+                onClick={() => handleNavigate("/")}
+              >
                 Contact
-              </Link>
+              </button>
             </li>
           </ul>
         </div>

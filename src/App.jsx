@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Sidenav from "./components/Sidenav";
 import Home from "./pages/Home";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Sidenav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
       <Footer />
     </>

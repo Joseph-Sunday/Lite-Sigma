@@ -3,15 +3,22 @@ import { motion, useInView } from "framer-motion";
 
 const Transform = ({ children }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "50px" });
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "10px",
+  });
 
   return (
     <motion.div
-      className="my-2"
       ref={ref}
-      initial={{ scale: 0 }}
-      animate={isInView ? { scale: 1 } : {}}
-      transition={{ duration: 1, ease: "ease" }}
+      initial={{ scale: 0.3, opacity: 0 }}
+      animate={isInView ? { scale: 1, opacity: 1 } : {}}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      style={{
+        willChange: "transform",
+        transform: "translateZ(0)",
+        backfaceVisibility: "hidden",
+      }}
     >
       {children}
     </motion.div>

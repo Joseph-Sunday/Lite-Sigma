@@ -6,13 +6,9 @@ import ScrollLeft from "./ScrollLeft";
 import ScrollUp from "./ScrollUp";
 import TextOpacity from "./TextOpacity";
 import TextScrollUp from "./TextScrollUp";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import Transform from "./Transform";
 
 const MainSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "10px" });
-
   return (
     <>
       <main className="main-section">
@@ -203,8 +199,9 @@ const MainSection = () => {
                   growth.
                 </p>
               </TextScrollUp>
-
-              <img src="/B2B.png" alt="B2B" />
+              <Transform>
+                <img src="/B2B.png" alt="B2B" />
+              </Transform>
             </div>
             <div className="main-section-saas-card">
               <ScrollUp>
@@ -218,7 +215,9 @@ const MainSection = () => {
                 </p>
               </TextScrollUp>
 
-              <img src="/B2B2BC.png" alt="B2B2BC" />
+              <Transform>
+                <img src="/B2B2BC.png" alt="B2B2BC" />
+              </Transform>
             </div>
           </div>
         </section>
