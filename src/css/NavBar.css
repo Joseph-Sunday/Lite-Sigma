@@ -62,6 +62,10 @@ nav {
   color: #b54500;
 }
 
+.active-link {
+  color: #b54500;
+}
+
 /* SIDENAV STYLES */
 .custom-sidenav {
   width: 80% !important;

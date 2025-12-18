@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { useThemeContext } from "../context/ThemeContexts";
+import { useLocation } from "react-router-dom";
 import "../css/App.css";
 import "../css/NavBar.css";
 
 const NavBar = () => {
   const { theme, toggleTheme } = useThemeContext();
+  const location = useLocation();
 
   return (
     <>
@@ -54,12 +56,22 @@ const NavBar = () => {
             <div className="d-none d-lg-block me-auto mx-3">
               <ul className="navbar-nav me-auto gap-2">
                 <li className="nav-item">
-                  <Link to="/" className="nav-link navbar-li-text">
+                  <Link
+                    to="/"
+                    className={`nav-link navbar-li-text ${
+                      location.pathname === "/" ? "active-link" : ""
+                    }`}
+                  >
                     Home
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/services" className="nav-link navbar-li-text">
+                  <Link
+                    to="/services"
+                    className={`nav-link navbar-li-text ${
+                      location.pathname === "/service" ? "active-link" : ""
+                    }`}
+                  >
                     Services
                   </Link>
                 </li>
