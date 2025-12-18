@@ -1,6 +1,6 @@
 import "../css/App.css";
 import "../css/Home.css";
-import "../css/Navbar.css";
+import "../css/NavBar.css";
 import ScrollRight from "./ScrollRight";
 import ScrollLeft from "./ScrollLeft";
 
