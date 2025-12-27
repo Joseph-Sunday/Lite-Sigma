@@ -1,6 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import "../css/ServiceHeroSection.css";
 
+motion;
+
 const ServicesHeroSection = () => {
   return (
     <>
@@ -16,8 +18,8 @@ const ServicesHeroSection = () => {
             <div className="hero-title-wrapper container-fluid">
               <motion.div
                 initial={{ x: "-100%" }}
-                animate={{ x: "100%" }}
-                transition={{ duration: 1.6, ease: "easeInOut" }}
+                animate={{ x: "105%" }}
+                transition={{ duration: 1.6, ease: "easeIn" }}
                 className="hero-section-orange-animation"
               />
 
@@ -34,7 +36,7 @@ const ServicesHeroSection = () => {
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ delay: 0.8, duration: 0.9, ease: "easeIn" }}
             >
               <p className="text-center d-inline-block hero-section-p m-3 px-4">
                 Delivering secure, scalable digital products and expert services

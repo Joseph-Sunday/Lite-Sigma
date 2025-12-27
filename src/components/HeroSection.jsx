@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const rotatingTexts = [
@@ -6,6 +6,8 @@ const rotatingTexts = [
   "POWERFUL SAAS TOOLS",
   "SCALABLE SYSTEMS",
 ];
+
+motion;
 
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
